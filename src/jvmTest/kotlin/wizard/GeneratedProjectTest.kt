@@ -134,7 +134,7 @@ class GeneratedProjectTest {
 
     @Test
     fun testIosProject() {
-        if ("mac" != System.getProperty("os.name", "generic").lowercase()) {
+        if (!listOf("mac", "mac os x").contains(System.getProperty("os.name").lowercase())) {
             return
         }
         listOf(
