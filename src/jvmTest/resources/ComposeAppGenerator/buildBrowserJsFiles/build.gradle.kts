@@ -4,7 +4,10 @@ plugins {
 }
 
 kotlin {
-    js { browser() }
+    js {
+        browser()
+        binaries.executable()
+    }
     sourceSets {
         commonMain.dependencies {
             api(libs.compose.runtime)
